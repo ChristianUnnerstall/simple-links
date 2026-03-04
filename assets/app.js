@@ -505,12 +505,12 @@ function confirmDeleteLink(catIdx, linkIdx) {
     });
 }
 
-/* ─── Reset to Defaults (re-import from data.json) ─────── */
+/* ─── Reset to Defaults (re-import from sample.json) ─────── */
 document
     .getElementById("btn-reset-data")
     .addEventListener("click", function () {
         var body =
-            '<div class="confirm-msg">This will discard all your changes and restore the original data from <strong>data.json</strong>.<br/>You will be prompted to select the file.</div>';
+            '<div class="confirm-msg">This will discard all your changes and restore the original data from <strong>sample.json</strong>.<br/>You will be prompted to select the file.</div>';
         var footer =
             "" +
             '<button class="modal-btn modal-btn-cancel" id="m-cancel">Cancel</button>' +
@@ -541,7 +541,7 @@ document
         var url = URL.createObjectURL(blob);
         var a = document.createElement("a");
         a.href = url;
-        a.download = "data.json";
+        a.download = "sample.json";
         document.body.appendChild(a);
         a.click();
         document.body.removeChild(a);
@@ -770,9 +770,9 @@ function positionTooltip(anchor) {
 
 /* ─── Initial Render ───────────────────────────────────── */
 (function bootstrap() {
-    // Always try to load data.json first; if it succeeds, use it as
+    // Always try to load sample.json first; if it succeeds, use it as
     // the source of truth (allows updating the file externally).
-    fetch("data.json")
+    fetch("sample.json")
         .then(function (r) {
             if (!r.ok) throw new Error("HTTP " + r.status);
             return r.json();
@@ -792,7 +792,7 @@ function positionTooltip(anchor) {
                 renderAll();
             } else {
                 emptyState.innerHTML =
-                    'No data loaded yet.<br/><button class="mgmt-btn accent-cyan" id="btn-first-import" style="margin-top:12px;">📥 Import data.json</button>';
+                    'No data loaded yet.<br/><button class="mgmt-btn accent-cyan" id="btn-first-import" style="margin-top:12px;">📥 Import sample.json</button>';
                 emptyState.style.display = "block";
                 document
                     .getElementById("btn-first-import")
