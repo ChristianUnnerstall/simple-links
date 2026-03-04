@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Linklist | Developed with ❤️ by Christian Unnerstall</title>
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+
+  <div class="container">
+    <!-- Clock -->
+    <div class="clock-wrapper">
+      <div class="clock-time" id="clock-time"></div>
+      <div class="clock-date" id="clock-date"></div>
+    </div>
+
+    <!-- Search + Tag Filter -->
+    <div class="search-row">
+      <div class="search-wrapper">
+        <span class="search-icon"></span>
+        <input type="text" class="search-input" id="search" placeholder="Search links…" autocomplete="off" />
+      </div>
+      <button class="filter-toggle" id="filter-toggle"><span>Filter by Tag</span><span class="chevron">▼</span></button>
+    </div>
+    <div class="filter-tags-wrapper" id="filter-tags-wrapper">
+      <div class="filter-tags" id="filter-tags"></div>
+    </div>
+
+    <!-- Management Bar -->
+    <div class="mgmt-bar" id="mgmt-bar">
+      <button class="mgmt-btn accent-green" id="btn-add-group">New Group</button>
+      <button class="mgmt-btn accent-cyan" id="btn-import-json">Import JSON</button>
+      <button class="mgmt-btn accent-blue" id="btn-export-json">Export JSON</button>
+      <button class="mgmt-btn accent-red" id="btn-reset-data">Reset to Defaults</button>
+    </div>
+
+    <!-- Grid -->
+    <div class="grid" id="grid"></div>
+
+    <!-- Empty state -->
+    <div class="empty-state" id="empty-state">No links found</div>
+
+    <!-- Footer -->
+    <div class="footer">
+      Developed with ❤️ by Christian Unnerstall</br>
+      v1.2.0 - Last updated: 2026-03-04
+    </div>
+  </div>
+
+  <!-- Modal Overlay (shared, populated by JS) -->
+  <div class="modal-overlay" id="modal-overlay">
+    <div class="modal" id="modal">
+      <div class="modal-header">
+        <span class="modal-title" id="modal-title"></span>
+        <button class="modal-close" id="modal-close">✕</button>
+      </div>
+      <div class="modal-body" id="modal-body"></div>
+      <div class="modal-footer" id="modal-footer"></div>
+    </div>
+  </div>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>

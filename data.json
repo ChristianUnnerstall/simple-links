@@ -1,0 +1,37 @@
+[
+  {
+    "title": "Private",
+    "icon": "📁",
+    "accent": "var(--accent-blue)",
+    "links": [
+      {
+        "name": "Google Search",
+        "icon": "",
+        "url": "https://google.com",
+        "desc": "Link to the google search.",
+        "tags": [
+          "google",
+          "search"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Business",
+    "icon": "📁",
+    "accent": "var(--accent-pink)",
+    "links": [
+      {
+        "name": "LinkedIn",
+        "icon": "",
+        "url": "https://linkedin.com",
+        "desc": "Link to the LinkedIn space.",
+        "tags": [
+          "linkedin",
+          "learning",
+          "education"
+        ]
+      }
+    ]
+  }
+]
